@@ -68,6 +68,6 @@ public class Coche {
     
     //Metodo mostrar info
         public String mostrarInfo() {
-        return "Carro {" + "color =" + color + ", marca =" + marca  + ", modelo = " + modelo  + ", Número de caballos de fuerza = " + caballos + ", cantidad de puertas =" +puertas +"matricula = "+matricula+ '}';
+        return "Carro {" + "color = " + color + ", marca = " + marca  + ", modelo = " + modelo  + ", Numero de caballos de fuerza = " + caballos + ", cantidad de puertas = " +puertas +", matricula = "+matricula+ '}';
         }
 }
