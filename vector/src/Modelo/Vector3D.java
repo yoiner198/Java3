@@ -4,49 +4,52 @@ import java.util.Scanner;
 
 
 public class Vector3D {
-    private int x, y, z, xx, yy, zz;
+    private double x, y, z, xx, yy, zz;
     Scanner r = new Scanner(System.in);
     //metodo constructor
-    public Vector3D(int x, int y, int z) {
+    
+    public Vector3D(){
+        
         this.x = x;
-        this.y = y;
-        this.z = z;
+        this.y = x;
+        this.z = x;
         
     }
     //metodo constructor sobrecargado
-    public Vector3D(){
-        System.out.println("Ingrese valor de x: ");
-        x=r.nextInt();
-        System.out.println("Ingrese valor de y: ");
-        y=r.nextInt();
-        System.out.println("Ingrese valor de z: ");
-        z=r.nextInt();
+    
+    public Vector3D(double x, double y, double z) {
+        this.x=x;
+        this.y=y;
+        this.z=z;
+        
     }
+    
+
     
     //metodo setter
 
-    public void setX(int x){
+    public void setX(double x){
         this.x = x;
     }
 
-    public void setY(int y){
+    public void setY(double y){
         this.y = y;
     }
 
-    public void setZ(int z){
+    public void setZ(double z){
         this.z = z;
     }
 
     //metodo getter
-    public int getX(){
+    public double getX(){
         return this.x;
     }
 
-    public int getY(){
+    public double getY(){
         return this.y;
     }
 
-    public int getZ(){
+    public double getZ(){
         return this.z;
     }
     
@@ -56,24 +59,24 @@ public class Vector3D {
         return "Vector: "+x+", "+y+", "+z;
     }
  
-    public int sumVector(){
-        System.out.println("Ingrese valor de x: ");
-        xx=r.nextInt();
+    public String sumVector(){
+        /*System.out.println("Ingrese valor de x: ");
+        xx=r.nextDouble();
         System.out.println("Ingrese valor de y: ");
-        yy=r.nextInt();
+        yy=r.nextDouble();
         System.out.println("Ingrese valor de z: ");
-        zz=r.nextInt();
-        return (x+xx)+(y+yy)+(z+zz);  
+        zz=r.nextDouble();*/
+        return (x+this.x)+", "+(y+this.y)+", "+(z+this.z);  
     } 
 
     public double moduleVector(){
-        return (Math.sqrt(Math.pow(2,x)+Math.pow(2,y)+Math.pow(2,z)));
+        return (Math.sqrt(Math.pow(2,(x+xx))+Math.pow(2,(y+yy))+Math.pow(2,(z))));
     }
     
     public String scalarMultiplication(int sc){
         System.out.println("Ingrese un número entero: ");
         sc=r.nextInt();
         
-        return (sc*x)+", "+(sc*y)+", "+(sc*z);
+        return (sc*(x+xx))+", "+(sc*(y+yy))+", "+(sc*(z+zz));
     }
 }

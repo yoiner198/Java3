@@ -14,11 +14,12 @@ import Modelo.Vector3D;
 public class TestVector {
 
     public static void main(String[] args) {
+        Vector3D a = new Vector3D();
         Vector3D ra = new Vector3D(1,2,3);
         
-        
+        System.out.println(a.getVector());
         System.out.println(ra.getVector());
-        
+       
         //Vector3D s = new Vector3D();
         
         //System.out.println(s.getVector());
@@ -27,7 +28,7 @@ public class TestVector {
         
         System.out.println("El modulo es: "+ra.moduleVector());
         
-        System.out.println(ra.scalarMultiplication(2));
+        System.out.println("La multiplicación por un escalar es: "+ra.scalarMultiplication(0));
         
     }
     
